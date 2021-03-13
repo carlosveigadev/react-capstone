@@ -1,6 +1,6 @@
 const URL = 'https://pokeapi.co/api/v2/';
 
-export const categoriesName = async () => {
+export const getCategory = async () => {
   let categoryData;
   try {
     const response = await fetch(`${URL}/type`);
