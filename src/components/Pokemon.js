@@ -1,7 +1,7 @@
-const Animal = () => (
+const Pokemon = () => (
   <>
-    <h1>Hi! Animals</h1>
+    <h1>Hi! Pokemon</h1>
   </>
 );
 
-export default Animal;
+export default Pokemon;

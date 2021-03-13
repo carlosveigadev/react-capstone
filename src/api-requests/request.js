@@ -1,23 +1,12 @@
 const URL = 'https://pokeapi.co/api/v2/';
 
-export const getCategory = async () => {
-  let categoryData;
-  try {
-    const response = await fetch(`${URL}/type`);
-    categoryData = await response.json();
-  } catch (error) {
-    return error;
-  }
-  return categoryData;
-};
+export const getCategory = () => fetch(`${URL}type`)
+  .then(response => response.json())
+  .then(result => result);
 
-export const pokemonByCategory = async url => {
-  let categoryData;
-  try {
-    const response = await fetch(url);
-    categoryData = await response.json();
-  } catch (error) {
-    return error;
-  }
-  return categoryData.pokemon;
+export const pokemonByCategory = url => {
+  const categoryData = fetch(url)
+    .then(response => response.json())
+    .then(result => result);
+  return categoryData;
 };
