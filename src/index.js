@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import '../styles/index.css';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './components/Routes';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <h1>Hi!</h1>
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Routes />
+  </BrowserRouter>,
   document.getElementById('root'),
 );
