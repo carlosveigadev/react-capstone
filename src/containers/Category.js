@@ -2,14 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-const CategoryFilter = ({ filter, clickHandle }) => {
+const categories = ['All', 'Normal', 'Fighting', 'Flying', 'Poison', 'Ground', 'Rock', 'Bug', 'Ghost', 'Steel', 'Fire', 'Water', 'Grass', 'Electric', 'Psychic', 'Ice', 'Dragon', 'Dark', 'Fairy', 'Unknown', 'Shadow'];
+
+const CategoryFilter = ({ clickHandler }) => {
   const handleChange = e => {
-    clickHandle(e.target.value);
+    clickHandler(categories.indexOf(e.target.value));
   };
   return (
     <>
       <select onChange={handleChange}>
-        {filter.map(cat => (
+        {categories.map(cat => (
           <option value={cat} key={cat}>{cat}</option>
         ))}
       </select>
@@ -18,8 +20,7 @@ const CategoryFilter = ({ filter, clickHandle }) => {
 };
 
 CategoryFilter.propTypes = {
-  filter: PropTypes.arrayOf(PropTypes.any).isRequired,
-  clickHandle: PropTypes.func.isRequired,
+  clickHandler: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({

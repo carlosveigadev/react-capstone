@@ -1,13 +1,21 @@
-export const pokemonByCategory = url => {
-  const categoryData = fetch(url)
+const URL = 'https://pokeapi.co/api/v2/';
+
+const saveResult = result => {
+  const data = result;
+  return data;
+};
+
+export const pokemonByCategory = async categoryId => {
+  const categoryData = await fetch(`${URL}type/${categoryId}`)
     .then(response => response.json())
-    .then(result => result);
+    .then(result => saveResult(result));
+  console.log(categoryData);
   return categoryData;
 };
 
-export const allPokemons = () => {
-  const pokeData = fetch('https://pokeapi.co/api/v2/pokemon?offset=0&limit=1118')
+export const allPokemons = async () => {
+  const pokeData = await fetch(`${URL}pokemon?offset=0&limit=1118`)
     .then(response => response.json())
     .then(result => result);
-  return pokeData;
+  return pokeData.results;
 };

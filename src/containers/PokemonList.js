@@ -1,35 +1,44 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import React from 'react';
+// import { allPokemons, pokemonByCategory } from '../api-requests/request';
 import CategoryFilter from './Category';
 import { changeFilter } from '../actions/actions';
-import Pokemon from '../components/Pokemon';
+// import Pokemon from '../components/Pokemon';
 
-const PokemonList = ({ filter, changeFilter, pokes }) => {
+const PokemonList = ({ filter, changeFilter }) => {
   const handleFilterChange = filter => {
     changeFilter(filter);
   };
 
-  const pokeRender = filter.length > 1 ? pokes : pokes.filter(poke => poke.category === filter[0]);
+  // const pokeRender = filter === 0 || f
+  // ilter === 'All' ? allPokemons() : pokemonByCategory(filter);
+  // setPokemonData(pokeRender);
+
+  // useEffect((filter)=>{
+  //   const pokeRender = filter === 0 ||
+  // filter === 'All' ? allPokemons() : pokemonByCategory(filter);
+  //   return setPokemonData(pokeRender)
+  //  }, []);
 
   return (
     <>
-      <CategoryFilter clickHandle={handleFilterChange} filter={filter} />
-      <div>
+      <CategoryFilter clickHandler={handleFilterChange} filter={filter} />
+      {/* <div>
         {pokeRender.map(poke => (
-          <Pokemon poke={poke} key={poke.id} />
+          <Pokemon poke={poke.name} key={poke.name} />
         ))}
-      </div>
+      </div> */}
     </>
   );
 };
 
 const mapStateToProps = state => ({
-  pokes: state.books,
+  filter: state,
 });
 
 PokemonList.propTypes = {
   filter: PropTypes.arrayOf(PropTypes.string).isRequired,
-  pokes: PropTypes.arrayOf(PropTypes.object).isRequired,
   changeFilter: PropTypes.func.isRequired,
 };
 
