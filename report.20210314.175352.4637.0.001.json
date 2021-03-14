@@ -1,0 +1,490 @@
+
+{
+  "header": {
+    "reportVersion": 2,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20210314.175352.4637.0.001.json",
+    "dumpEventTime": "2021-03-14T17:53:52Z",
+    "dumpEventTimeStamp": "1615755232759",
+    "processId": 4637,
+    "threadId": null,
+    "cwd": "/home/carlos/Documents/React/react-capstone",
+    "commandLine": [
+      "/home/carlos/.nvm/versions/node/v12.16.3/bin/node",
+      "/home/carlos/Documents/React/react-capstone/node_modules/react-scripts/scripts/test.js",
+      "--testLocationInResults",
+      "--json",
+      "--useStderr",
+      "--outputFile",
+      "/tmp/jest_runner_react_capstone.json",
+      "--watch",
+      "--no-coverage",
+      "--no-color",
+      "--reporters",
+      "default",
+      "--reporters",
+      "/home/carlos/.vscode/extensions/orta.vscode-jest-3.2.0/out/reporter.js"
+    ],
+    "nodejsVersion": "v12.16.3",
+    "glibcVersionRuntime": "2.32",
+    "glibcVersionCompiler": "2.17",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "12.16.3",
+      "v8": "7.8.279.23-node.35",
+      "uv": "1.34.2",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.16.0",
+      "modules": "72",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1g",
+      "cldr": "36.0",
+      "icu": "65.1",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.16.3/node-v12.16.3-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.16.3/node-v12.16.3.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "5.8.0-44-generic",
+    "osVersion": "#50-Ubuntu SMP Tue Feb 9 06:29:41 UTC 2021",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "AMD Ryzen 3 3200G with Radeon Vega Graphics",
+        "speed": 3313,
+        "user": 19605300,
+        "nice": 423500,
+        "sys": 4104400,
+        "idle": 210951700,
+        "irq": 0
+      },
+      {
+        "model": "AMD Ryzen 3 3200G with Radeon Vega Graphics",
+        "speed": 3661,
+        "user": 19545100,
+        "nice": 353500,
+        "sys": 4182000,
+        "idle": 209760600,
+        "irq": 0
+      },
+      {
+        "model": "AMD Ryzen 3 3200G with Radeon Vega Graphics",
+        "speed": 2005,
+        "user": 19789500,
+        "nice": 436700,
+        "sys": 4143500,
+        "idle": 209906100,
+        "irq": 0
+      },
+      {
+        "model": "AMD Ryzen 3 3200G with Radeon Vega Graphics",
+        "speed": 3558,
+        "user": 19351800,
+        "nice": 445100,
+        "sys": 4206900,
+        "idle": 211046500,
+        "irq": 0
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "enp5s0",
+        "internal": false,
+        "mac": "04:d9:f5:79:25:e3",
+        "address": "192.168.1.2",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "enp5s0",
+        "internal": false,
+        "mac": "04:d9:f5:79:25:e3",
+        "address": "2804:30c:c30:ee00:4a18:568a:9d22:5eec",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "enp5s0",
+        "internal": false,
+        "mac": "04:d9:f5:79:25:e3",
+        "address": "2804:30c:c30:ee00:5075:5be4:d463:24db",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "enp5s0",
+        "internal": false,
+        "mac": "04:d9:f5:79:25:e3",
+        "address": "fe80::6334:662:271d:5a3a",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 2
+      }
+    ],
+    "host": "carlos-POS-PIQ77CL"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x0000000000b46955",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [/home/carlos/.nvm/versions/node/v12.16.3/bin/node]"
+    },
+    {
+      "pc": "0x0000000000a09c8f",
+      "symbol": "node::OnFatalError(char const*, char const*) [/home/carlos/.nvm/versions/node/v12.16.3/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b7d71e",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/home/carlos/.nvm/versions/node/v12.16.3/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b7da99",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/home/carlos/.nvm/versions/node/v12.16.3/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d2a1f5",
+      "symbol": " [/home/carlos/.nvm/versions/node/v12.16.3/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d2a886",
+      "symbol": "v8::internal::Heap::RecomputeLimits(v8::internal::GarbageCollector) [/home/carlos/.nvm/versions/node/v12.16.3/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d37105",
+      "symbol": "v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [/home/carlos/.nvm/versions/node/v12.16.3/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d37fb5",
+      "symbol": "v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/home/carlos/.nvm/versions/node/v12.16.3/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d3aa6c",
+      "symbol": "v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/home/carlos/.nvm/versions/node/v12.16.3/bin/node]"
+    },
+    {
+      "pc": "0x0000000000d0163b",
+      "symbol": "v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationType, v8::internal::AllocationOrigin) [/home/carlos/.nvm/versions/node/v12.16.3/bin/node]"
+    },
+    {
+      "pc": "0x000000000104300e",
+      "symbol": "v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [/home/carlos/.nvm/versions/node/v12.16.3/bin/node]"
+    },
+    {
+      "pc": "0x00000000013c5b79",
+      "symbol": " [/home/carlos/.nvm/versions/node/v12.16.3/bin/node]"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2153254912,
+    "totalCommittedMemory": 2149851712,
+    "usedMemory": 2119951872,
+    "availableMemory": 48630512,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 33088,
+        "capacity": 32808,
+        "used": 32808,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 4194304,
+        "committedMemory": 1187736,
+        "capacity": 2094912,
+        "used": 136000,
+        "available": 1958912
+      },
+      "old_space": {
+        "memorySize": 2133729280,
+        "committedMemory": 2133647056,
+        "capacity": 2106694808,
+        "used": 2106678504,
+        "available": 16304
+      },
+      "code_space": {
+        "memorySize": 2265088,
+        "committedMemory": 2180128,
+        "capacity": 2052192,
+        "used": 2052192,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 3674112,
+        "committedMemory": 3673720,
+        "capacity": 2003680,
+        "used": 2003680,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 9080832,
+        "committedMemory": 9080832,
+        "capacity": 9045904,
+        "used": 9045904,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 2784,
+        "used": 2784,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 2094912,
+        "used": 0,
+        "available": 2094912
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 257.372,
+    "kernelCpuSeconds": 23.5087,
+    "cpuConsumptionPercent": 1.25933,
+    "maxRss": 2287710208,
+    "pageFaults": {
+      "IORequired": 26,
+      "IONotRequired": 5190438
+    },
+    "fsActivity": {
+      "reads": 22432,
+      "writes": 4720
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 168.184,
+    "kernelCpuSeconds": 19.8843,
+    "cpuConsumptionPercent": 0.843204,
+    "fsActivity": {
+      "reads": 22432,
+      "writes": 4720
+    }
+  },
+  "libuv": [
+  ],
+  "workers": [
+  ],
+  "environmentVariables": {
+    "GJS_DEBUG_TOPICS": "JS ERROR;JS LOG",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "SNAP_INSTANCE_KEY": "",
+    "USER": "carlos",
+    "SNAP_COMMON": "/var/snap/code/common",
+    "LC_TIME": "pt_BR.UTF-8",
+    "VSCODE_NLS_CONFIG": "{\"locale\":\"en-us\",\"availableLanguages\":{},\"_languagePackSupport\":true}",
+    "npm_config_user_agent": "npm/7.5.5 node/v12.16.3 linux x64 ci/custom",
+    "VSCODE_HANDLES_UNCAUGHT_ERRORS": "true",
+    "CI": "true",
+    "SSH_AGENT_PID": "1357",
+    "XDG_SESSION_TYPE": "x11",
+    "npm_node_execpath": "/home/carlos/.nvm/versions/node/v12.16.3/bin/node",
+    "SHLVL": "0",
+    "VSCODE_LOG_STACK": "false",
+    "HOME": "/home/carlos",
+    "SNAP_LIBRARY_PATH": "/var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void",
+    "CHROME_DESKTOP": "code-url-handler.desktop",
+    "DESKTOP_SESSION": "ubuntu",
+    "SNAP_USER_DATA": "/home/carlos/snap/code/58",
+    "NVM_BIN": "/home/carlos/.nvm/versions/node/v12.16.3/bin",
+    "npm_package_json": "/home/carlos/Documents/React/react-capstone/package.json",
+    "GIO_LAUNCHED_DESKTOP_FILE": "/var/lib/snapd/desktop/applications/code_code.desktop",
+    "VSCODE_IPC_HOOK": "/run/user/1000/vscode-aa507a92-1.54.2-main.sock",
+    "VSCODE_LOG_NATIVE": "false",
+    "GNOME_SHELL_SESSION_MODE": "ubuntu",
+    "GTK_MODULES": "gail:atk-bridge",
+    "APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL": "true",
+    "LC_MONETARY": "pt_BR.UTF-8",
+    "MANAGERPID": "1076",
+    "LC_CTYPE": "pt_BR.UTF-8",
+    "npm_config_userconfig": "/home/carlos/.npmrc",
+    "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1000/bus",
+    "SNAP_REVISION": "58",
+    "GIO_LAUNCHED_DESKTOP_FILE_PID": "2747",
+    "COLOR": "0",
+    "NVM_DIR": "/home/carlos/.nvm",
+    "npm_config_metrics_registry": "https://registry.npmjs.org/",
+    "MANDATORY_PATH": "/usr/share/gconf/ubuntu.mandatory.path",
+    "IM_CONFIG_PHASE": "1",
+    "LOGNAME": "carlos",
+    "SNAP_CONTEXT": "ua_1yl8ripYNxFGEtCEjqWh6miKelJhsYi5pjGG5dlvwAMlpRR7h",
+    "JOURNAL_STREAM": "8:45883",
+    "_": "/snap/code/58/usr/share/code/code",
+    "npm_config_prefix": "/home/carlos/.nvm/versions/node/v12.16.3",
+    "XDG_SESSION_CLASS": "user",
+    "DEFAULTS_PATH": "/usr/share/gconf/ubuntu.default.path",
+    "SNAP_VERSION": "fd6f3bce",
+    "WALLABY_PRODUCTION": "true",
+    "USERNAME": "carlos",
+    "npm_config_cache": "/home/carlos/.npm",
+    "GNOME_DESKTOP_SESSION_ID": "this-is-deprecated",
+    "SNAP_INSTANCE_NAME": "code",
+    "WINDOWPATH": "2",
+    "npm_config_node_gyp": "/home/carlos/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js",
+    "PATH": "/home/carlos/Documents/React/react-capstone/node_modules/.bin:/home/carlos/Documents/React/node_modules/.bin:/home/carlos/Documents/node_modules/.bin:/home/carlos/node_modules/.bin:/home/node_modules/.bin:/node_modules/.bin:/home/carlos/.nvm/versions/node/v12.16.3/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/home/carlos/.nvm/versions/node/v12.16.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "SESSION_MANAGER": "local/carlos-POS-PIQ77CL:@/tmp/.ICE-unix/1414,unix/carlos-POS-PIQ77CL:/tmp/.ICE-unix/1414",
+    "INVOCATION_ID": "87f64925b6ca4d5aa855c92f8f379e0f",
+    "VSCODE_AMD_ENTRYPOINT": "vs/workbench/services/extensions/node/extensionHostProcess",
+    "NODE": "/home/carlos/.nvm/versions/node/v12.16.3/bin/node",
+    "npm_package_name": "capstone",
+    "XDG_MENU_PREFIX": "gnome-",
+    "LC_ADDRESS": "pt_BR.UTF-8",
+    "BAMF_DESKTOP_FILE_HINT": "/var/lib/snapd/desktop/applications/code_code.desktop",
+    "SNAP_DATA": "/var/snap/code/58",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "VSCODE_NODE_CACHED_DATA_DIR": "/home/carlos/.config/Code/CachedData/fd6f3bce6709b121a895d042d343d71f317d74e7",
+    "DISPLAY": ":0",
+    "LANG": "en_US.UTF-8",
+    "XDG_CURRENT_DESKTOP": "Unity",
+    "LC_TELEPHONE": "pt_BR.UTF-8",
+    "VSCODE_CRASH_REPORTER_START_OPTIONS": "{\"companyName\":\"Microsoft\",\"productName\":\"VSCode\",\"submitURL\":\"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=64fbc834-a2d8-4634-84fa-ca70a5d1c495&iid=64fbc834-a2d8-4634-84fa-ca70a5d1c495&sid=64fbc834-a2d8-4634-84fa-ca70a5d1c495\",\"uploadToServer\":true}",
+    "XMODIFIERS": "@im=ibus",
+    "XDG_SESSION_DESKTOP": "ubuntu",
+    "XAUTHORITY": "/run/user/1000/gdm/Xauthority",
+    "LS_COLORS": "",
+    "npm_lifecycle_script": "react-scripts test \"--testLocationInResults\" \"--json\" \"--useStderr\" \"--outputFile\" \"/tmp/jest_runner_react_capstone.json\" \"--watch\" \"--no-coverage\" \"--no-color\" \"--reporters\" \"default\" \"--reporters\" \"/home/carlos/.vscode/extensions/orta.vscode-jest-3.2.0/out/reporter.js\"",
+    "SNAP_USER_COMMON": "/home/carlos/snap/code/common",
+    "SSH_AUTH_SOCK": "/run/user/1000/keyring/ssh",
+    "GSETTINGS_SCHEMA_DIR": "/snap/code/58/usr/share/glib-2.0/schemas",
+    "SNAP_ARCH": "amd64",
+    "SNAP_COOKIE": "ua_1yl8ripYNxFGEtCEjqWh6miKelJhsYi5pjGG5dlvwAMlpRR7h",
+    "ORIGINAL_XDG_CURRENT_DESKTOP": "ubuntu:GNOME",
+    "SHELL": "/bin/bash",
+    "LC_NAME": "pt_BR.UTF-8",
+    "DISABLE_WAYLAND": "1",
+    "GDK_PIXBUF_MODULEDIR": "/snap/code/58/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders",
+    "npm_package_version": "0.1.0",
+    "npm_lifecycle_event": "test",
+    "ELECTRON_RUN_AS_NODE": "1",
+    "QT_ACCESSIBILITY": "1",
+    "SNAP_REEXEC": "",
+    "GDMSESSION": "ubuntu",
+    "SNAP_NAME": "code",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "VSCODE_VERBOSE_LOGGING": "true",
+    "LC_MEASUREMENT": "pt_BR.UTF-8",
+    "GDK_PIXBUF_MODULE_FILE": "/home/carlos/snap/code/common/.cache/gdk-pixbuf-loaders.cache",
+    "GPG_AGENT_INFO": "/run/user/1000/gnupg/S.gpg-agent:0:1",
+    "GJS_DEBUG_OUTPUT": "stderr",
+    "LC_IDENTIFICATION": "pt_BR.UTF-8",
+    "VSCODE_PIPE_LOGGING": "true",
+    "QT_IM_MODULE": "ibus",
+    "npm_config_init_module": "/home/carlos/.npm-init.js",
+    "npm_config_globalconfig": "/home/carlos/.nvm/versions/node/v12.16.3/etc/npmrc",
+    "PWD": "/home/carlos/Documents/React/react-capstone",
+    "VSCODE_CLI": "1",
+    "npm_execpath": "/home/carlos/.nvm/versions/node/v12.16.3/lib/node_modules/npm/bin/npm-cli.js",
+    "XDG_CONFIG_DIRS": "/etc/xdg/xdg-ubuntu:/etc/xdg",
+    "SNAP_REAL_HOME": "/home/carlos",
+    "XDG_DATA_DIRS": "/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop",
+    "NVM_CD_FLAGS": "",
+    "SNAP": "/snap/code/58",
+    "LC_NUMERIC": "pt_BR.UTF-8",
+    "npm_command": "test",
+    "LC_PAPER": "pt_BR.UTF-8",
+    "BREAKPAD_DUMP_LOCATION": "/home/carlos/.config/Code/exthost Crash Reports",
+    "ELECTRON_NO_ATTACH_CONSOLE": "1",
+    "VSCODE_PID": "3150",
+    "VSCODE_IPC_HOOK_EXTHOST": "/run/user/1000/vscode-ipc-87923262-446e-42b9-ba9d-aa0c5a6c064a.sock",
+    "INIT_CWD": "/home/carlos/Documents/React/react-capstone",
+    "EDITOR": "vi",
+    "BABEL_ENV": "test",
+    "NODE_ENV": "test",
+    "PUBLIC_URL": "",
+    "NODE_PATH": "",
+    "JEST_WORKER_ID": "1"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": 0,
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 1832786432,
+      "hard": 1832786432
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 1048576,
+      "hard": 1048576
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": "unlimited"
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 55443,
+      "hard": 55443
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "linux-vdso.so.1",
+    "/lib/x86_64-linux-gnu/libdl.so.2",
+    "/lib/x86_64-linux-gnu/libstdc++.so.6",
+    "/lib/x86_64-linux-gnu/libm.so.6",
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    "/lib64/ld-linux-x86-64.so.2",
+    "/lib/x86_64-linux-gnu/libnss_files.so.2",
+    "/lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2",
+    "/lib/x86_64-linux-gnu/libresolv.so.2",
+    "/lib/x86_64-linux-gnu/libnss_dns.so.2"
+  ]
+}

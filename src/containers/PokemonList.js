@@ -1,26 +1,19 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import React from 'react';
-// import { allPokemons, pokemonByCategory } from '../api-requests/request';
 import CategoryFilter from './Category';
 import { changeFilter } from '../actions/actions';
 // import Pokemon from '../components/Pokemon';
 
-const PokemonList = ({ filter, changeFilter }) => {
+const PokemonList = ({
+  filter, changeFilter, pokes, categorizedPokes,
+}) => {
   const handleFilterChange = filter => {
     changeFilter(filter);
   };
 
-  // const pokeRender = filter === 0 || f
-  // ilter === 'All' ? allPokemons() : pokemonByCategory(filter);
-  // setPokemonData(pokeRender);
-
-  // useEffect((filter)=>{
-  //   const pokeRender = filter === 0 ||
-  // filter === 'All' ? allPokemons() : pokemonByCategory(filter);
-  //   return setPokemonData(pokeRender)
-  //  }, []);
-
+  const pokeRender = filter === 0 || filter === 'All' ? pokes : categorizedPokes[0][filter];
+  console.log(pokeRender);
   return (
     <>
       <CategoryFilter clickHandler={handleFilterChange} filter={filter} />
@@ -34,11 +27,15 @@ const PokemonList = ({ filter, changeFilter }) => {
 };
 
 const mapStateToProps = state => ({
-  filter: state,
+  pokes: state.pokes,
+  filter: state.filter,
+  categorizedPokes: state.categoryPokemon,
 });
 
 PokemonList.propTypes = {
-  filter: PropTypes.arrayOf(PropTypes.string).isRequired,
+  filter: PropTypes.arrayOf(PropTypes.any).isRequired,
+  pokes: PropTypes.arrayOf(PropTypes.any).isRequired,
+  categorizedPokes: PropTypes.arrayOf(PropTypes.any).isRequired,
   changeFilter: PropTypes.func.isRequired,
 };
 

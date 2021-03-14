@@ -7,7 +7,8 @@ describe('Test the API', () => {
     });
   });
   it('pokemonByCategory is working and returns an object', () => {
-    pokemonByCategory().then(data => {
+    const mockArray = [];
+    pokemonByCategory(mockArray).then(data => {
       expect(data).toBe('object');
     });
   });
