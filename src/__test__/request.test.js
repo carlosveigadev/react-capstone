@@ -1,8 +1,8 @@
-import { getCategory, pokemonByCategory, passCategory } from '../api-requests/request';
+import { allPokemons, pokemonByCategory } from '../api-requests/request';
 
 describe('Test the API', () => {
-  it('getCategory is working and returns an object', () => {
-    getCategory().then(data => {
+  it('allPokemons is working and returns an object', () => {
+    allPokemons().then(data => {
       expect(data).toBe('object');
     });
   });
@@ -10,8 +10,5 @@ describe('Test the API', () => {
     pokemonByCategory().then(data => {
       expect(data).toBe('object');
     });
-  });
-  it('API is working and returns an object', () => {
-    expect(passCategory()).toEqual(expect.any(Array));
   });
 });
