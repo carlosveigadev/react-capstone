@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 
-const Pokemon = ({ name }) => (
-  <>
-    <h1>{name}</h1>
-  </>
+const Pokemon = ({ poke }) => (
+  <span>
+    <h1>
+      <span>{poke}</span>
+    </h1>
+  </span>
 );
 
 Pokemon.propTypes = {
-  name: PropTypes.arrayOf(PropTypes.any).isRequired,
+  poke: PropTypes.string.isRequired,
 };
 
 export default Pokemon;

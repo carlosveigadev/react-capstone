@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import React from 'react';
 import CategoryFilter from './Category';
 import { changeFilter } from '../actions/actions';
-// import Pokemon from '../components/Pokemon';
+import Pokemon from '../components/Pokemon';
 
 const PokemonList = ({
   filter, changeFilter, pokes, categorizedPokes,
@@ -12,16 +12,30 @@ const PokemonList = ({
     changeFilter(filter);
   };
 
-  const pokeRender = filter === 0 || filter === 'All' ? pokes : categorizedPokes[0][filter];
-  console.log(pokeRender);
+  const renderAll = pokemon => (
+    <div>
+      {pokemon.map(poke => (
+        <Pokemon poke={poke.name} key={poke.name} />
+      ))}
+    </div>
+  );
+
+  const renderCat = pokemon => (
+    <div>
+      {pokemon.map(poke => (
+        <Pokemon poke={poke.pokemon.name} key={poke.name} />
+      ))}
+    </div>
+  );
+
+  console.log(categorizedPokes[0][filter]);
+
+  const pokeRender = filter === 0 || filter === 'All' ? renderAll(pokes) : renderCat(categorizedPokes[0][filter - 1]);
+
   return (
     <>
       <CategoryFilter clickHandler={handleFilterChange} filter={filter} />
-      {/* <div>
-        {pokeRender.map(poke => (
-          <Pokemon poke={poke.name} key={poke.name} />
-        ))}
-      </div> */}
+      {pokeRender}
     </>
   );
 };
