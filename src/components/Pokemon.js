@@ -20,7 +20,6 @@ const Pokemon = ({ location }) => {
   }, []);
 
   if (data) {
-    console.log(data);
     return (
       <span>
         <Navbar />
