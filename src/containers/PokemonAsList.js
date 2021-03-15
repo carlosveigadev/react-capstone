@@ -7,7 +7,7 @@ const PokemonAsList = ({ poke, url }) => {
   }
 
   return (
-    <Link to={{ pathname: '/pokemon', state: { poke, url } }}>{capitalizeFirstLetter(poke)}</Link>
+    <Link to={{ pathname: `/pokemon/${poke}`, state: { poke, url } }}>{capitalizeFirstLetter(poke)}</Link>
   );
 };
 

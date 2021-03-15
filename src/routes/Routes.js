@@ -8,7 +8,8 @@ const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/pokemon" component={Pokemon} />
+      <Route exact path="/pokemon/:pokeName" component={Pokemon} />
+      {/* path="/users/:userId" */}
       <Route exact path="/about" component={About} />
     </Switch>
   </BrowserRouter>
