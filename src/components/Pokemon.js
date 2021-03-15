@@ -25,8 +25,10 @@ const Pokemon = ({ location }) => {
         <Navbar />
         <div className={style.flex}>
           <div className={style.mainDiv}>
+
             <h1>{name}</h1>
             <img src={data.sprites.front_default} alt={name} />
+
             <div className={style.flex}>
               <GiBodyHeight className={style.icon} />
               <div className={style.data}>
@@ -54,7 +56,7 @@ const Pokemon = ({ location }) => {
     );
   }
   return (
-    <p>Fetching Data...</p>
+    <p className={style.flex}>Fetching Data...</p>
   );
 };
 
