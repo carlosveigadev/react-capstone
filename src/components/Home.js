@@ -1,11 +1,13 @@
 import Navbar from '../containers/Navbar';
-// import Category from '../containers/Category';
 import PokemonList from '../containers/PokemonList';
+import style from '../styles/Home.module.css';
 
 const Home = () => (
   <>
     <Navbar />
-    <h1>Hi!</h1>
+    <h1 className={style.title}>
+      Hi, here you can select to show all the pokémons or you can select a specific type!
+    </h1>
     <PokemonList />
   </>
 );

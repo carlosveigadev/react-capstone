@@ -1,0 +1,15 @@
+.customSelect select {
+  background-color: dodgerblue;
+  color: #020122;
+  font-size: 1.5em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(../styles/images/pokeball.svg);
+  background-size: 1em;
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: center;
+  padding: 0.5em;
+  border-radius: 5px;
+}
