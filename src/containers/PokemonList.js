@@ -28,11 +28,9 @@ const PokemonList = ({
 
   const renderAll = pokemon => (
     <div>
-      <div>
-        {pokemon.map(poke => (
-          <PokemonAsList poke={poke.name} url={poke.url} key={poke.name} />
-        ))}
-      </div>
+      {pokemon.map(poke => (
+        <PokemonAsList poke={poke.name} url={poke.url} key={poke.name} />
+      ))}
     </div>
   );
 

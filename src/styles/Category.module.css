@@ -1,4 +1,6 @@
 .customSelect select {
+  width: 7em;
+  border-color: rgba(30, 143, 255, 0.884);
   background-color: dodgerblue;
   color: #020122;
   font-size: 1.5em;
@@ -12,4 +14,5 @@
   background-position-y: center;
   padding: 0.5em;
   border-radius: 5px;
+  margin-bottom: 1em;
 }
