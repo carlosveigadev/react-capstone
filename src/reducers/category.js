@@ -1,6 +1,6 @@
 import { CATEGORY_POKEMON } from '../actions/actions';
 
-const catReducer = (state = '', action) => {
+const catReducer = (state = [], action) => {
   switch (action.type) {
     case CATEGORY_POKEMON:
       return [...state, action.payload];

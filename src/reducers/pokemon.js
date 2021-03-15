@@ -1,6 +1,6 @@
 import { ADD_POKEMON } from '../actions/actions';
 
-const pokeReducer = (state = '', action) => {
+const pokeReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_POKEMON:
       return action.payload;

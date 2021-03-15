@@ -12,6 +12,14 @@ const PokemonList = ({
     changeFilter(filter);
   };
 
+  if (pokes.length === 0) {
+    return <p>Wait man!</p>;
+  }
+
+  if (categorizedPokes.length === 0) {
+    return <p>Wait man!</p>;
+  }
+
   const renderAll = pokemon => (
     <div>
       {pokemon.map(poke => (
@@ -20,17 +28,13 @@ const PokemonList = ({
     </div>
   );
 
-  const renderCat = pokemon => (
+  const renderCat = (pokemon, filter) => (
     <div>
-      {pokemon.map(poke => (
-        <Pokemon poke={poke.pokemon.name} key={poke.name} />
-      ))}
+      {pokemon[filter - 1].map(name => <Pokemon poke={name.pokemon.name} key={name.name} />)}
     </div>
   );
 
-  console.log(categorizedPokes[0][filter]);
-
-  const pokeRender = filter === 0 || filter === 'All' ? renderAll(pokes) : renderCat(categorizedPokes[0][filter - 1]);
+  const pokeRender = filter === 0 || filter[0] === 'All' ? renderAll(pokes) : renderCat(categorizedPokes[0], filter);
 
   return (
     <>
