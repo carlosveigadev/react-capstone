@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import React, { useEffect } from 'react';
 import CategoryFilter from './Category';
 import { changeFilter, addPokemon, categoryPokemon } from '../actions/actions';
-import Pokemon from '../components/Pokemon';
+import PokemonAsList from './PokemonAsList';
 import { allPokemons, pokemonByCategory } from '../api-requests/request';
 
 const PokemonList = ({
@@ -28,14 +28,20 @@ const PokemonList = ({
   const renderAll = pokemon => (
     <div>
       {pokemon.map(poke => (
-        <Pokemon poke={poke.name} key={poke.name} />
+        <PokemonAsList poke={poke.name} url={poke.url} key={poke.name} />
       ))}
     </div>
   );
 
   const renderCat = (pokemon, filter) => (
     <div>
-      {pokemon[filter - 1].map(name => <Pokemon poke={name.pokemon.name} key={name.name} />)}
+      {pokemon[filter - 1].map(name => (
+        <PokemonAsList
+          poke={name.pokemon.name}
+          url={name.pokemon.url}
+          key={pokemon.name}
+        />
+      ))}
     </div>
   );
 
