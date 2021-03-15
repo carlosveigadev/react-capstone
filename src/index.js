@@ -8,7 +8,6 @@ import Routes from './routes/Routes';
 import filterReducer from './reducers/filter';
 import pokeReducer from './reducers/pokemon';
 import catReducer from './reducers/category';
-import { allPokemons, pokemonByCategory } from './api-requests/request';
 
 /* eslint-disable no-underscore-dangle */
 const rootReducer = combineReducers({
@@ -20,9 +19,6 @@ const rootReducer = combineReducers({
 const store = createStore(rootReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 /* eslint-enable */
-
-allPokemons(store);
-pokemonByCategory(store);
 
 ReactDOM.render(
   <Provider store={store}>

@@ -6,7 +6,7 @@ const categories = ['All', 'Normal', 'Fighting', 'Flying', 'Poison', 'Ground', '
 
 const CategoryFilter = ({ clickHandler }) => {
   const handleChange = e => {
-    clickHandler(categories.indexOf(e.target.value));
+    clickHandler([categories.indexOf(e.target.value)]);
   };
   return (
     <>

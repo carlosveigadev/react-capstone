@@ -1,8 +1,6 @@
-import { addPokemon, categoryPokemon } from '../actions/actions';
-
 const URL = 'https://pokeapi.co/api/v2/';
 
-export const pokemonByCategory = store => {
+export const pokemonByCategory = action => {
   let categoryId = 1;
   const categoryArray = [];
   while (categoryId <= 18) {
@@ -11,11 +9,13 @@ export const pokemonByCategory = store => {
       .then(result => categoryArray.push(result.pokemon));
     categoryId += 1;
   }
-  store.dispatch(categoryPokemon(categoryArray));
+  console.log(action);
+  console.log(categoryArray);
+  action(categoryArray);
 };
 
-export const allPokemons = async store => {
+export const allPokemons = async action => {
   await fetch(`${URL}pokemon?offset=0&limit=1118`)
     .then(response => response.json())
-    .then(result => store.dispatch(addPokemon(result.results)));
+    .then(result => action(result.results));
 };

@@ -1,24 +1,29 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import React from 'react';
+import React, { useEffect } from 'react';
 import CategoryFilter from './Category';
-import { changeFilter } from '../actions/actions';
+import { changeFilter, addPokemon, categoryPokemon } from '../actions/actions';
 import Pokemon from '../components/Pokemon';
+import { allPokemons, pokemonByCategory } from '../api-requests/request';
 
 const PokemonList = ({
-  filter, changeFilter, pokes, categorizedPokes,
+  filter, changeFilter, pokes, categorizedPokes, addPokemon, categoryPokemon,
 }) => {
   const handleFilterChange = filter => {
     changeFilter(filter);
   };
 
-  if (pokes.length === 0) {
-    return <p>Wait man!</p>;
-  }
+  useEffect(() => {
+    if (pokes.length === 0) {
+      allPokemons(addPokemon);
+    }
+  }, []);
 
-  if (categorizedPokes.length === 0) {
-    return <p>Wait man!</p>;
-  }
+  useEffect(() => {
+    if (categorizedPokes.length === 0) {
+      pokemonByCategory(categoryPokemon);
+    }
+  }, []);
 
   const renderAll = pokemon => (
     <div>
@@ -55,10 +60,14 @@ PokemonList.propTypes = {
   pokes: PropTypes.arrayOf(PropTypes.any).isRequired,
   categorizedPokes: PropTypes.arrayOf(PropTypes.any).isRequired,
   changeFilter: PropTypes.func.isRequired,
+  addPokemon: PropTypes.func.isRequired,
+  categoryPokemon: PropTypes.func.isRequired,
 };
 
 const mapDispatch = {
   changeFilter,
+  addPokemon,
+  categoryPokemon,
 };
 
 export default connect(mapStateToProps, mapDispatch)(PokemonList);
