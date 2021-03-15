@@ -5,7 +5,6 @@ function Navbar() {
     <>
       <h2>Pokemon Pokedex</h2>
       <Link to="/">Home </Link>
-      <Link to="/pokemon">Pokemon </Link>
       <Link to="/about">About </Link>
     </>
   );
