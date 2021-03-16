@@ -1,6 +1,7 @@
 # **React & Redux** Capstone Project - **Pokémon Pokédex.**
  
-This is a solo project at the end of the Microverse Main Technical Curriculum of the React & Redux section. It's a real-world-like project, built with business specifications to improve and test the achievement of technical and soft skills gained during this section of the program. The technical requirements of this project are::
+This is a solo project at the end of the Microverse Main Technical Curriculum of the React & Redux section. It's a real-world-like project, built with business specifications to improve and test the achievement of technical and soft skills gained during this section of the program. The technical requirements of this project are:
+
 1. The project is a single page application built with React and Redux
 2. The data that was retrieved from the API should be stored in the Redux store
 3. You should filter the data that you retrieve from the API using a Filter stateless component
