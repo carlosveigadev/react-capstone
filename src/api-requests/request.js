@@ -10,7 +10,6 @@ export const pokemonByCategory = () => {
         .then(result => categoryArray.push(result.pokemon));
       categoryId += 1;
     }
-    console.log(categoryArray);
     return categoryArray;
   } catch (error) {
     return null;
