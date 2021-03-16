@@ -4,19 +4,17 @@ import { GiBodyHeight, GiWeight } from 'react-icons/gi';
 import { HiOutlineIdentification } from 'react-icons/hi';
 import Navbar from '../containers/Navbar';
 import style from '../styles/Pokemon.module.css';
+import { fetchPokeData } from '../api-requests/request';
 
 const Pokemon = ({ location }) => {
   const [data, setData] = useState(null);
 
   const name = location.state.poke;
+  const pokeUrl = location.state.url;
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch(location.state.url);
-      const newData = await response.json();
-      setData(newData);
-    };
-    fetchData();
+  useEffect(async () => {
+    const newData = await fetchPokeData(pokeUrl);
+    setData(newData);
   }, []);
 
   if (data) {

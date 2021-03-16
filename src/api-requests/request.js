@@ -17,3 +17,9 @@ export const allPokemons = async action => {
     .then(response => response.json())
     .then(result => action(result.results));
 };
+
+export const fetchPokeData = async url => {
+  const response = await fetch(url);
+  const newData = await response.json();
+  return newData;
+};
