@@ -1,5 +1,4 @@
 {
-  "homepage": "https://carlosveigadev.github.io/react-capstone/",
   "name": "capstone",
   "version": "0.1.0",
   "private": true,
@@ -33,8 +32,6 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
