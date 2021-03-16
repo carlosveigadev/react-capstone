@@ -63,9 +63,5 @@ describe('test the inputs and verifies if the right value is displayed in the ca
     expect(screen.getByText('Dark'));
     userEvent.click(screen.getByText('Fairy'), leftClick);
     expect(screen.getByText('Fairy'));
-    userEvent.click(screen.getByText('Unknown'), leftClick);
-    expect(screen.getByText('Unknown'));
-    userEvent.click(screen.getByText('Shadow'), leftClick);
-    expect(screen.getByText('Shadow'));
   });
 });

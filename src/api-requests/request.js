@@ -4,12 +4,13 @@ export const pokemonByCategory = () => {
   try {
     let categoryId = 1;
     const categoryArray = [];
-    while (categoryId <= 18) {
+    while (categoryId < 19) {
       fetch(`${URL}type/${categoryId}`)
         .then(response => response.json())
         .then(result => categoryArray.push(result.pokemon));
       categoryId += 1;
     }
+    console.log(categoryArray);
     return categoryArray;
   } catch (error) {
     return null;
