@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-capstone/static/css/main.51f3c0b7.chunk.css",
+    "main.js": "/react-capstone/static/js/main.84799fdb.chunk.js",
+    "main.js.map": "/react-capstone/static/js/main.84799fdb.chunk.js.map",
+    "runtime-main.js": "/react-capstone/static/js/runtime-main.a66af663.js",
+    "runtime-main.js.map": "/react-capstone/static/js/runtime-main.a66af663.js.map",
+    "static/js/2.3843c5b4.chunk.js": "/react-capstone/static/js/2.3843c5b4.chunk.js",
+    "static/js/2.3843c5b4.chunk.js.map": "/react-capstone/static/js/2.3843c5b4.chunk.js.map",
+    "index.html": "/react-capstone/index.html",
+    "static/css/main.51f3c0b7.chunk.css.map": "/react-capstone/static/css/main.51f3c0b7.chunk.css.map",
+    "static/js/2.3843c5b4.chunk.js.LICENSE.txt": "/react-capstone/static/js/2.3843c5b4.chunk.js.LICENSE.txt",
+    "static/media/Navbar.module.css": "/react-capstone/static/media/Pokemon Solid.5d60be1f.ttf",
+    "static/media/CategoryFilter.module.css": "/react-capstone/static/media/pokeball.4c56728d.svg",
+    "static/media/PokemonList.module.css": "/react-capstone/static/media/pokeball_red.1c54d58c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a66af663.js",
+    "static/js/2.3843c5b4.chunk.js",
+    "static/css/main.51f3c0b7.chunk.css",
+    "static/js/main.84799fdb.chunk.js"
+  ]
+}
