@@ -14,9 +14,10 @@ const PokemonList = ({
     changeFilter(filter);
   };
 
-  useEffect(() => {
+  useEffect(async () => {
     if (pokes.length === 0) {
-      allPokemons(addPokemon);
+      const allPokes = await allPokemons();
+      addPokemon(allPokes);
     }
   }, []);
 

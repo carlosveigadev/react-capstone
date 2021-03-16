@@ -12,14 +12,23 @@ export const pokemonByCategory = action => {
   action(categoryArray);
 };
 
-export const allPokemons = async action => {
-  await fetch(`${URL}pokemon?offset=0&limit=1118`)
-    .then(response => response.json())
-    .then(result => action(result.results));
+export const allPokemons = async () => {
+  try {
+    const response = await fetch(`${URL}pokemon?offset=0&limit=1118`);
+    const newDataJson = await response.json();
+    const result = newDataJson.results;
+    return result;
+  } catch (error) {
+    return null;
+  }
 };
 
 export const fetchPokeData = async url => {
-  const response = await fetch(url);
-  const newData = await response.json();
-  return newData;
+  try {
+    const response = await fetch(url);
+    const newData = await response.json();
+    return newData;
+  } catch (error) {
+    return null;
+  }
 };
