@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import React, { useEffect } from 'react';
 import CategoryFilter from './CategoryFilter';
 import { changeFilter, addPokemon, categoryPokemon } from '../actions/actions';
-import PokemonAsList from './PokemonBlock';
+import PokemonAsList from '../containers/PokemonBlock';
 import { allPokemons, pokemonByCategory } from '../api-requests/request';
 import style from '../styles/PokemonList.module.css';
 

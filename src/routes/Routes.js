@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from '../components/Home';
+import Home from '../containers/Home';
 import Pokemon from '../components/Pokemon';
-import About from '../components/About';
+import About from '../containers/About';
 
 const Routes = () => (
   <BrowserRouter>

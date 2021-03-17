@@ -1,4 +1,4 @@
-import Navbar from '../containers/Navbar';
+import Navbar from './Navbar';
 import style from '../styles/About.module.css';
 
 const About = () => (

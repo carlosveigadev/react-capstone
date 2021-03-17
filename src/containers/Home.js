@@ -1,5 +1,5 @@
-import Navbar from '../containers/Navbar';
-import PokemonList from '../containers/PokemonList';
+import Navbar from './Navbar';
+import PokemonList from '../components/PokemonList';
 import style from '../styles/Home.module.css';
 
 const Home = () => (

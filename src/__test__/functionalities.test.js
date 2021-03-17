@@ -4,7 +4,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
-import Home from '../components/Home';
+import Home from '../containers/Home';
 import filterReducer from '../reducers/filter';
 import pokeReducer from '../reducers/pokemon';
 import catReducer from '../reducers/category';
