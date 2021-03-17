@@ -45,16 +45,7 @@ This is a solo project at the end of the Microverse Main Technical Curriculum of
  
 ## **Video Link Demo**
  
-<script type="text/javascript" async src="https://play.vidyard.com/embed/v4.js"></script>
-<img
-  style="width: 100%; margin: auto; display: block;"
-  class="vidyard-player-embed"
-  src="https://play.vidyard.com/EypH2cD6Ta9FPpgAQy4m86.jpg"
-  data-uuid="EypH2cD6Ta9FPpgAQy4m86"
-  data-v="4"
-  data-type="inline"
-/>
- 
+[Video Demo Link](https://share.vidyard.com/watch/EypH2cD6Ta9FPpgAQy4m86?)
  
 ## **Getting Started**
  
@@ -107,4 +98,7 @@ Give a ⭐️ if you like this project!
  
 This project is [MIT](LICENSE) licensed.
  
+
+
+
 

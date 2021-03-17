@@ -164,16 +164,6 @@ Array [
           >
             Fairy
           </option>
-          <option
-            value="Unknown"
-          >
-            Unknown
-          </option>
-          <option
-            value="Shadow"
-          >
-            Shadow
-          </option>
         </select>
       </div>
     </div>
