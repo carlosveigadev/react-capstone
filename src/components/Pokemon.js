@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useParams } from 'react';
 import { GiBodyHeight, GiWeight } from 'react-icons/gi';
 import { HiOutlineIdentification } from 'react-icons/hi';
 import Navbar from '../containers/Navbar';
@@ -8,6 +8,11 @@ import { fetchPokeData } from '../api-requests/request';
 
 const Pokemon = ({ location }) => {
   const [data, setData] = useState(null);
+
+  if (location === undefined) {
+    const { pokeName } = useParams();
+    console.log(pokeName);
+  }
 
   const name = location.state.poke;
   const pokeUrl = location.state.url;
