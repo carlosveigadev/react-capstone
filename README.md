@@ -13,16 +13,7 @@ This is a solo project at the end of the Microverse Main Technical Curriculum of
  
 **A glimpse**
  
-<script type="text/javascript" async src="https://play.vidyard.com/embed/v4.js"></script>
-<img
- style="width: 100%; margin: auto; display: block;"
- class="vidyard-player-embed"
- src="https://play.vidyard.com/aoA3iovYu9bRs3WyPLhugh.jpg"
- data-uuid="aoA3iovYu9bRs3WyPLhugh"
- data-v="4"
- data-type="inline"
-/>
- 
+![Gif](Pokemon-Pokdex.gif)
  
  
 ## **Built With**
