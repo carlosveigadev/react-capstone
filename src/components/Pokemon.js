@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { useState, useEffect, useParams } from 'react';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { GiBodyHeight, GiWeight } from 'react-icons/gi';
 import { HiOutlineIdentification } from 'react-icons/hi';
 import Navbar from '../containers/Navbar';
@@ -9,13 +10,17 @@ import { fetchPokeData } from '../api-requests/request';
 const Pokemon = ({ location }) => {
   const [data, setData] = useState(null);
 
-  if (location === undefined) {
-    const { pokeName } = useParams();
-    console.log(pokeName);
-  }
+  let name;
+  let pokeUrl;
 
-  const name = location.state.poke;
-  const pokeUrl = location.state.url;
+  if (location.state === undefined) {
+    const { pokeName } = useParams();
+    name = pokeName;
+    pokeUrl = `https://pokeapi.co/api/v2/pokemon/${pokeName}/`;
+  } else {
+    name = location.state.poke;
+    pokeUrl = location.state.url;
+  }
 
   useEffect(async () => {
     const newData = await fetchPokeData(pokeUrl);
